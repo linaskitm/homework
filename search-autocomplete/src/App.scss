@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+.nav {
+  margin: 0 auto;
+  height: 100px;
+  width: 660px;
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+  position: relative;
+
+  .inputDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+
+    img {
+      height: 30px;
+      width: 40px;
+      margin-top: -2px;
+    }
+    .btn {
+      margin-top: 5px;
+      margin-bottom: -10px;
+      margin-left: 5px;
+    }
+
+    .input {
+      width: 80%;
+      opacity: 0.4;
+      height: 50px;
+      border-style: none;
+    }
+    .input:focus {
+      opacity: 1;
+      border-style: none;
+    }
+  }
+  .optionList {
+    background-color: #fafafc;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    width: 80%;
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      height: 80px;
+      padding: 10px 10px 10px 45px;
+      cursor: pointer;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
