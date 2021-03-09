@@ -1,25 +1,27 @@
+$white: #fff;
+$font-12: 1.2rem;
+$helvetica: Helvetica;
+
 * {
   box-sizing: border-box;
 }
-.App {
-  background-color: blue;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 90%;
+body {
+  background-image: linear-gradient(to right, #6f94e6, #1d57f5);
+  margin: 0;
+  font-family: $helvetica;
+  .App {
+    height: 100vh;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 .nav {
   height: 100px;
   width: 100%;
-  background-image: linear-gradient(
-    to right,
-    #ff8177 0%,
-    #ff867a 0%,
-    #ff8c7f 21%,
-    #f99185 52%,
-    #cf556c 78%,
-    #b12a5b 100%
-  );
+  background-image: linear-gradient(to right, #fa670b, #f53d1d);
   position: relative;
 
   .form {
@@ -40,30 +42,33 @@
       }
 
       input {
-        color: white;
+        color: $white;
         font-weight: bold;
         background-color: rgba(250, 250, 250, 0);
         width: 100%;
         border-style: none;
-        font-size: 1rem;
+        font-size: $font-12;
       }
       input:focus {
         background-image: url("icons/movie.svg");
-        background-size: 30px 35px;
+        background-size: 25px 30px;
         background-repeat: no-repeat;
         background-position: 15px;
-        background-color: white;
+        background-color: $white;
         padding-left: 60px;
         padding-bottom: 7px;
         border-style: none;
         color: black;
         outline: none;
         position: absolute;
-        left: 100px;
-        top: 30px;
-        width: 80%;
+        left: 93px;
+        top: 20px;
+        width: 91%;
         height: 55%;
-        font-size: 1rem;
+        font-size: $font-12;
+      }
+      input::placeholder {
+        color: $white;
       }
     }
   }
@@ -73,32 +78,37 @@
     height: 40%;
     width: 50px;
     margin: 30px 35px 0 5px;
-    background-color: white;
+    background-color: $white;
+    button {
+      background-color: transparent;
+      width: 100%;
+      border-style: none;
+    }
     img {
       height: 40px;
       width: 40px;
     }
   }
   .optionList {
-    background-color: #fafafc;
-
+    background-color: $white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 10%);
-    width: 80%;
+    top: 75px;
+    left: 53%;
+    transform: translate(-50%, 0%);
+    width: 91%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
     .option {
       display: flex;
       flex-direction: column;
-      height: 80px;
-      padding: 10px 10px 10px 45px;
+      height: 60px;
+      padding: 10px 0 10px 55px;
       cursor: pointer;
       p {
         margin: 0;
       }
       .title {
-        font-size: 1.5rem;
+        font-size: $font-12;
         font-weight: bold;
       }
     }
